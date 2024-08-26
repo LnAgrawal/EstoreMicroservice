@@ -1,0 +1,21 @@
+#Downloading axonserver jars [One time]
+
+docker run --name axonserver --hostname 19ffd0e67744 -p 8024:8024 -p 8124:8124 -v "C:\Data\LN\workspace\Microservice\EstoreMicroservice\docker-data\data":/axonserver/data -v "C:\Data\LN\workspace\Microservice\EstoreMicroservice\docker-data\events":/axonserver/events -v "C:\Data\LN\workspace\Microservice\EstoreMicroservice\docker-data\config":/axonserver/config axoniq/axonserver
+
+#Stop Axon server
+ctrl +c
+
+#List
+docker ps
+
+#List all exisiting
+docker ps -a
+
+#Start using id
+docker start #id
+
+#Stop using id
+docker stop #id
+
+#delete docker container, note the container should be in stop state
+docker rm #id
